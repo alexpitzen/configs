@@ -1,1 +1,9 @@
-/home/alex/.gitconfig
+[user]
+	email = alexpitzen@gmail.com
+	name = alexpitzen
+[alias]
+	dif = diff --ws-error-highlight=new,old
+	difff = diff --color-word=. --ws-error-highlight=new,old -w
+	diffff = diff --find-copies-harder -B -C
+[core]
+	editor = nvim
