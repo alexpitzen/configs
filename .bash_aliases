@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 
 set -o vi
 
@@ -21,7 +21,9 @@ alias gp="git remote prune origin"
 alias lint="pylint --rcfile=.pylintrc --reports=n --output-format=colorized"
 
 alias gr="git log --graph --full-history --color -i --pretty=tformat:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m\""
-alias gr="gr | head"
+alias gra="gr --all"
+alias grh="gr | head"
+alias grah="gra | head"
 
 alias dirs="dirs -v"
 # cd ~1
@@ -57,3 +59,22 @@ alias gig=git
 alias gigt=git
 alias gti=git
 alias igt=git
+
+alias addhour='sudo date -s "1 hour"'
+alias subhour='sudo date -s "1 hour ago"'
+alias timesync='sudo timedatectl set-ntp'
+
+# Make sure both are on and ~75%(?)
+# amixer get Mic
+# amixer get Capture
+
+# amixer set Mic toggle
+# amixer set Mic 5%+
+# amixer set Capture 5%+    # ?
+
+alias gsudo='sudo env XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR'
+
+alias powertune='sudo powertop --auto-tune'
+
+# nmcli c add type wifi ssid "asdf" con-name "fdsa" 802-11-wireless-security.key-mgmt wpa-psk 802-11-wireless-security.psk "asdfasdfasdf"
+# nmcli c up fdsa
