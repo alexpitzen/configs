@@ -1,6 +1,6 @@
 export EDITOR=nvim
 
-set -o vi
+#set -o vi
 
 # powerline-daemon -q
 # POWERLINE_BASH_CONTINUATION=1
@@ -20,7 +20,8 @@ alias gp="git remote prune origin"
 
 alias lint="pylint --rcfile=.pylintrc --reports=n --output-format=colorized"
 
-alias gr="git log --graph --full-history --color -i --pretty=tformat:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m\""
+#alias gr="git log --graph --full-history --color -i --pretty=tformat:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m\""
+alias gr="TZ=UTC git log --graph --full-history --date=format:'%Y_%m_%d_%H%M%S' --color -i --pretty=tformat:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x20%x1b[34m(%ad)%x1b[0m\""
 alias gra="gr --all"
 alias grh="gr | head"
 alias grah="gra | head"
@@ -78,3 +79,7 @@ alias powertune='sudo powertop --auto-tune'
 
 # nmcli c add type wifi ssid "asdf" con-name "fdsa" 802-11-wireless-security.key-mgmt wpa-psk 802-11-wireless-security.psk "asdfasdfasdf"
 # nmcli c up fdsa
+
+if [ -f ~/.work_aliases ]; then
+    . ~/.work_aliases
+fi

@@ -1,8 +1,9 @@
 
 set backspace=2
 set hlsearch
+set noautoread
 
-" let g:python3_host_prog = "/usr/bin/python3"
+let g:python3_host_prog = "/usr/bin/python3"
 let mapleader = "\<Space>"
 
 set ignorecase
@@ -10,6 +11,7 @@ set smartcase
 
 set shiftwidth=4 " <>=
 set softtabstop=4 " tab
+set ts=4
 set et
 
 " noequalalways (don't auto-size all panes when one closes
