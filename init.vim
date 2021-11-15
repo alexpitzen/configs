@@ -9,7 +9,7 @@ let mapleader = "\<Space>"
 set ignorecase
 set smartcase
 
-set shiftwidth=4 " <>=
+set shiftwidth=0 " <>=   0 matches ts
 set softtabstop=4 " tab
 set ts=4
 set et
@@ -26,6 +26,8 @@ set noerrorbells
 set number relativenumber
 
 filetype plugin indent on
+
+autocmd Filetype ts setlocal tabstop=2
 
 command! Num :set number! relativenumber!
 command! Ps :set paste!
