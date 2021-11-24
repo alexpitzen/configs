@@ -73,6 +73,11 @@ alias timesync='sudo timedatectl set-ntp'
 # amixer set Mic 5%+
 # amixer set Capture 5%+    # ?
 
+function fixmic() {
+    amixer set Mic 100%
+    amixer set Capture 85%
+}
+
 alias gsudo='sudo env XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR'
 
 alias powertune='sudo powertop --auto-tune'

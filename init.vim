@@ -23,6 +23,8 @@ syn on
 set conceallevel=1
 set noerrorbells
 
+set clipboard=unnamed,unnamedplus
+
 set number relativenumber
 
 filetype plugin indent on
@@ -35,6 +37,7 @@ command! Bd e #|bd #
 
 map <leader>n <esc>:bn<cr>
 map <leader>p <esc>:bp<cr>
+map <leader>c "+y
 
 call plug#begin()
 
