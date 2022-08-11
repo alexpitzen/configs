@@ -78,6 +78,10 @@ function fixmic() {
     amixer set Capture 85%
 }
 
+
+# -t is duration, alternatively use -to for timestamp
+# ffmpeg -ss 00:00:09 -i Replay_2022-02-25_01-27-51.mp4 -t 00:00:11 -vcodec copy -acodec copy suisave.mp4
+
 alias gsudo='sudo env XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR'
 
 alias powertune='sudo powertop --auto-tune'
@@ -88,3 +92,13 @@ alias powertune='sudo powertop --auto-tune'
 if [ -f ~/.work_aliases ]; then
     . ~/.work_aliases
 fi
+
+alias league='sudo sysctl -w abi.vsyscall32=0'
+
+alias temp='watch -n 5 "sensors | grep '"'"'fan\|Core'"'"'"'
+
+alias heh='echo -n 𓁹‿𓁹 | xclip -selection c'
+alias shrug='echo -n "¯\\_(ツ)_/¯" | xclip -selection c'
+
+alias randomizer='/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/Games/UPRandomizer/randomizer.jar'
+alias java8='/usr/lib/jvm/java-8-openjdk-amd64/bin/java'
